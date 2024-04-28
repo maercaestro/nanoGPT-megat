@@ -5,7 +5,7 @@ from maercbpe import RegexTokenizer
 
 # Load your saved tokenizer model
 tokenizer = RegexTokenizer()
-tokenizer.load("data/abuworks/models/regex.model")
+tokenizer.load("./nanoGPT-megat/data/abuworks/models/regex.model")
 
 # Load your dataset
 with open('./nanoGPT-megat/data/abuworks/works.txt') as f:

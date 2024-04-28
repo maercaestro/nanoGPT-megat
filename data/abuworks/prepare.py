@@ -8,7 +8,7 @@ tokenizer = RegexTokenizer()
 tokenizer.load("models/regex.model")
 
 # Load your dataset
-with open('abuworks/works.txt') as f:
+with open('works.txt') as f:
     data = f.read()
 n = len(data)
 train_data = data[:int(n*0.9)]

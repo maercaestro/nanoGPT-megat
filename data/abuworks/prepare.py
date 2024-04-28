@@ -8,7 +8,7 @@ tokenizer = RegexTokenizer()
 tokenizer.load("data/abuworks/models/regex.model")
 
 # Load your dataset
-with open('data/abuworks/works.txt') as f:
+with open('./nanoGPT-megat/data/abuworks/works.txt') as f:
     data = f.read()
 n = len(data)
 train_data = data[:int(n*0.9)]

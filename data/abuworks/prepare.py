@@ -5,10 +5,10 @@ from maercbpe import RegexTokenizer
 
 # Load your saved tokenizer model
 tokenizer = RegexTokenizer()
-tokenizer.load("data/abuworks/models/regex.model")
+tokenizer.load("models/regex.model")
 
 # Load your dataset
-with open('data/abuworks/works.txt') as f:
+with open('abuworks/works.txt') as f:
     data = f.read()
 n = len(data)
 train_data = data[:int(n*0.9)]

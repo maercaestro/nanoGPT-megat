@@ -15,7 +15,7 @@ wandb_run_name = 'mini-gpt'
 
 dataset = 'abuworks'
 gradient_accumulation_steps = 1
-batch_size = 128
+batch_size = 32
 block_size = 512 # context of up to 256 previous characters
 
 # baby GPT model :)

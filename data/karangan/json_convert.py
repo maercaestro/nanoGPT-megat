@@ -4,19 +4,8 @@ import os
 # Python program to read
 # json file
  
-import json
- 
-# Opening JSON file
-f = open('karangan.net.json')
- 
-# returns JSON object as 
-# a dictionary
-data = json.load(f)
- 
-# Iterating through the json
-# list
-for i in data['p']:
-    print(i)
- 
-# Closing file
-f.close()
+with open('karangan.net.json', 'r') as json_file:
+    data = json.load(json_file)
+data = ''.join(''.join(sub_entry) for entry in data for sub_entry in entry["p"])
+
+data

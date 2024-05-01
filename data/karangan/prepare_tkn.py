@@ -9,8 +9,6 @@ with open('karangan.net.json', 'r') as json_file:
     data = json.load(json_file)
 data = ''.join(''.join(sub_entry) for entry in data for sub_entry in entry['p'])
 
-
-
 n = len(data)
 train_data = data[:int(n*0.9)]
 val_data = data[int(n*0.9):]

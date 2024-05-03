@@ -6,10 +6,24 @@ import json
 import re
 
 
+import json
+import re
+
 # Function to remove the first 8 words from a string
 def remove_first_8_words(text):
     words = text.split()
     filtered_words = words[8:]
+    
+    # Check if '\n' exists and add punctuation before it
+    for i, word in enumerate(filtered_words):
+        if '\n' in word:
+            # Split the word at '\n'
+            parts = word.split('\n')
+            # Add punctuation to the first part of the word
+            parts[0] += '.'
+            # Join the parts back together
+            filtered_words[i] = '\n'.join(parts)
+    
     return ' '.join(filtered_words)
 
 # Load JSONL data from file and process each line
@@ -23,6 +37,8 @@ with open('data/lirik/lirik.jsonl', 'r') as file:
 
 # Join all the modified strings into a single string
 data = ' '.join(modified_texts)
+print(data)
+
 
 n = len(data)
 train_data = data[:int(n*0.9)]

@@ -7,7 +7,7 @@ wandb_log = False # feel free to turn on
 wandb_project = 'lirik'
 wandb_run_name = 'ft-' + str(time.time())
 
-dataset = 'lirik'
+dataset = 'data/lirik'
 init_from = 'gpt2-xl' # this is the largest GPT-2 model
 
 # only save checkpoints if the validation loss improves

@@ -37,7 +37,6 @@ with open('data/lirik/lirik.jsonl', 'r') as file:
 
 # Join all the modified strings into a single string
 data = ' '.join(modified_texts)
-print(data)
 
 
 n = len(data)
